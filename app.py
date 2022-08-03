@@ -1,7 +1,6 @@
 imort numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
-#from flask_ngrok import run_with_ngrok
 import pickle
 
 
@@ -52,5 +51,5 @@ def predict():
     return render_template('index.html', prediction_text='KNN Model predicted : {}'.format(message1))
 
 
-if __name__ == "__main__":
-  app.run(debug=True)
+  if __name__ == "__main__":
+    app.run(debug=True)
