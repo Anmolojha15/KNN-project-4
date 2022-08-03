@@ -15,7 +15,7 @@ X[:, 4] = labelencoder_X.fit_transform(X[:, 4])
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X = sc.fit_transform(X)
-run_with_ngrok(app)
+#run_with_ngrok(app)
 
 @app.route('/')
 def home():
@@ -50,6 +50,5 @@ def predict():
         
     return render_template('index.html', prediction_text='KNN Model predicted : {}'.format(message1))
 
-
-  if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == "__main__":
+  app.run(debug=True)
